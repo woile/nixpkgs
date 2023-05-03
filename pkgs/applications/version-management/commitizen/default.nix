@@ -5,6 +5,7 @@
 , decli
 , fetchFromGitHub
 , git
+, importlib-metadata
 , jinja2
 , lib
 , packaging
@@ -27,7 +28,7 @@
 
 buildPythonApplication rec {
   pname = "commitizen";
-  version = "2.42.1";
+  version = "3.2.1";
 
   src = fetchFromGitHub {
     owner = "commitizen-tools";
@@ -58,6 +59,7 @@ buildPythonApplication rec {
     argcomplete
     typing-extensions
     packaging
+    importlib_metadata
   ];
 
   doCheck = true;
